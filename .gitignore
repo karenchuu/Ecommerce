@@ -4,3 +4,7 @@ target/
 # IDEA #
 .idea/
 *.iml
+
+# Config #
+src/main/resources/application-dev.yml
+src/main/resources/application-prod.yml
