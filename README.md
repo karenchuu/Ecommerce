@@ -1,9 +1,6 @@
 # Ecommerce
 
-> 1. **快速體驗項目**：[DEMO](http://ec2-54-215-191-12.us-west-1.compute.amazonaws.com/) 。
-> 2.  本項目為商城系统和通用性支付系统，支付系統請往[這邊](https://github.com/karenchuu/pay)。
-
-
+> **快速體驗項目**：[DEMO](http://ec2-54-215-191-12.us-west-1.compute.amazonaws.com/) 。
 
 ##  目錄
 
