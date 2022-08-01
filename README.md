@@ -14,6 +14,8 @@
 本項目是一套電商平台+通用型支付系統的雙系統項目，基於SpringBoot+MyBatis实现。
 使用MySQL作為存儲層，Redis存儲購物車的商品，使用 Nginx 服務器實現反向代理，部署於AWS，支付系統串接微信和支付寶，並使用RabbitMQ實現支付的異步通知。
 
+本項目為電商平台和通用性支付系统，這是電商平台，支付系統請往[這邊](https://github.com/karenchuu/pay)。
+
 ## 功能模塊
 
 購物車
