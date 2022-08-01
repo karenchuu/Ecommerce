@@ -59,8 +59,8 @@ CREATE TABLE `mall_order` (
   `send_time` datetime DEFAULT NULL COMMENT '發貨時間',
   `end_time` datetime DEFAULT NULL COMMENT '交易完成時間',
   `close_time` datetime DEFAULT NULL COMMENT '交易關閉時間',
-  `create_time` datetime DEFAULT NULL COMMENT '建立時間',
-  `update_time` datetime DEFAULT NULL COMMENT '更新時間',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '建立時間',
+  `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
   PRIMARY KEY (`id`),
   UNIQUE KEY `order_no_index` (`order_no`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -75,8 +75,8 @@ CREATE TABLE `mall_order_item` (
   `current_unit_price` decimal(20,2) DEFAULT NULL COMMENT '生成訂單時的商品單價，單位是元,保留兩位小數',
   `quantity` int(10) DEFAULT NULL COMMENT '商品數量',
   `total_price` decimal(20,2) DEFAULT NULL COMMENT '商品總價,單位是元,保留兩位小數',
-  `create_time` datetime DEFAULT NULL,
-  `update_time` datetime DEFAULT NULL,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '建立時間',
+  `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
   PRIMARY KEY (`id`),
   KEY `order_no_index` (`order_no`) USING BTREE,
   KEY `order_no_user_id_index` (`user_id`,`order_no`) USING BTREE

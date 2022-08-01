@@ -228,6 +228,7 @@ public class OrderServiceImpl implements IOrderService {
 
         if (shipping != null) {
             orderVo.setShippingId(shipping.getId());
+            orderVo.setReceiverName(shipping.getReceiverName());
             orderVo.setShippingVo(shipping);
         }
 
