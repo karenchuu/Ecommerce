@@ -230,6 +230,14 @@ public class OrderServiceImpl implements IOrderService {
             orderVo.setShippingId(shipping.getId());
             orderVo.setShippingVo(shipping);
         }
+
+        Map<Integer, OrderStatusEnum> orderStatusEnumMap = OrderStatusEnum.buildMap();
+        Map<Integer, PaymentTypeEnum> paymentTypeEnumMap = PaymentTypeEnum.buildMap();
+        System.out.println(order.getStatus());
+        System.out.println(order.getPaymentType());
+        orderVo.setStatusDesc(orderStatusEnumMap.get(order.getStatus()).getDesc());
+        orderVo.setPaymentTypeDesc(paymentTypeEnumMap.get(order.getPaymentType()).getDesc());
+
         return orderVo;
     }
 

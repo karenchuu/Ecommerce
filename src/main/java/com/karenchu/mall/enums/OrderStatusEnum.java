@@ -1,5 +1,8 @@
 package com.karenchu.mall.enums;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 訂單狀態:0-已取消，10-未付款，20-已付款，40-已發貨，50-交易成功，60-交易關閉
  */
@@ -34,5 +37,15 @@ public enum OrderStatusEnum {
 
     public String getDesc() {
         return desc;
+    }
+
+    public static Map<Integer, OrderStatusEnum> buildMap() {
+        Map<Integer, OrderStatusEnum> map = new HashMap<Integer, OrderStatusEnum>();
+        OrderStatusEnum[] values = OrderStatusEnum.values();
+        for (OrderStatusEnum value : values) {
+            map.put(value.getCode(), value);
+        }
+
+        return map;
     }
 }

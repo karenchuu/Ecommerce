@@ -16,9 +16,13 @@ public class OrderVo {
 
     private Integer paymentType;
 
+    private String paymentTypeDesc;
+
     private Integer postage;
 
     private Integer status;
+
+    private String statusDesc;
 
     private Date paymentTime;
 
