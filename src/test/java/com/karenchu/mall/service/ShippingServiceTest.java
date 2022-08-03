@@ -41,6 +41,7 @@ public class ShippingServiceTest extends MallApplicationTests {
         add();
     }
 
+    @Test
     public void add() {
         ResponseVo<Map<String, Integer>> responseVo = shippingService.add(uid, form);
         log.info("result={}", responseVo);
