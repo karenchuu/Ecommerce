@@ -11,6 +11,13 @@
 
 本項目為電商平台和通用性支付系统，這是電商平台，支付系統請往[這邊](https://github.com/karenchuu/pay)。
 
+* Built a dual system project for an e-commerce platform and general purpose payment system using Java.
+* Introduced critical functionality including payment, shopping cart, product management, category management,
+order management, address management, user management, etc to establish core user journeys.
+* Achieved high performance using RabbitMQ to consume payment messages and process them asynchronously
+* Improved query efficiency for shopping cart and reduced pressure on MySQL database by adding Redis cache
+* Decoupled the payment module from the e-commerce system to reduce dependencies and increase robustness
+
 ## 功能模塊
 
 購物車
